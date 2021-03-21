@@ -1,12 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <Auth />
+  <img alt="Brainstorm" src="./assets/brainstorm.png" width="150" />
+  <h1 v-if="isSignedIn">hi {{ userEmail }}</h1>
+  <Auth v-else />
 </template>
 
 <script setup>
-import Auth from './components/Auth.vue'
+import Auth from "./components/Auth.vue";
+import { ref, reactive } from "vue";
+import firebase from "firebase/app";
+import "firebase/auth";
 
+const isSignedIn = ref(false);
+const userEmail = ref("");
 
+//firebase.auth().signOut()
+firebase.auth().onAuthStateChanged(
+  function (user) {
+    userEmail.value = user?.email ?? "";
+    isSignedIn.value = !!user;
+  },
+  function (error) {
+    console.log(error);
+  }
+);
 </script>
 
 <style>
