@@ -9,7 +9,7 @@
 import Auth from "./components/Auth.vue";
 import Loading from "./components/Loading.vue";
 import IsThatTone from "./components/IsThatTone.vue";
-import { ref, reactive } from "vue";
+import { ref } from "vue";
 import firebase from "firebase/app";
 import "firebase/auth";
 
