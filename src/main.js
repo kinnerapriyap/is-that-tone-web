@@ -7,6 +7,8 @@ firebase.initializeApp(firebaseConfig);
 firebase
   .auth()
   .signInAnonymously()
-  .then(() => console.log("signed in"))
+  .then(() => {
+    return console.log("signed in");
+  })
   .catch((error) => console.error(error));
 createApp(App).mount("#app");
