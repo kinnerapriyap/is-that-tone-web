@@ -1,6 +1,6 @@
 <template>
   <img alt="Brainstorm" src="./assets/brainstorm.png" width="150" />
-  <h1 v-if="isSignedIn">hi {{ userEmail }}</h1>
+  <h1 v-if="isSignedIn != false">hi {{ userEmail }}</h1>
   <Auth v-else />
 </template>
 
@@ -10,7 +10,7 @@ import { ref, reactive } from "vue";
 import firebase from "firebase/app";
 import "firebase/auth";
 
-const isSignedIn = ref(false);
+const isSignedIn = ref(null);
 const userEmail = ref("");
 
 //firebase.auth().signOut()
