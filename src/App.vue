@@ -1,11 +1,12 @@
 <template>
   <img alt="Brainstorm" src="./assets/brainstorm.png" width="150" />
-  <h1 v-if="isSignedIn != false">hi {{ userEmail }}</h1>
+  <IsThatTone v-if="isSignedIn != false" :userEmail="userEmail" />
   <Auth v-else />
 </template>
 
 <script setup>
 import Auth from "./components/Auth.vue";
+import IsThatTone from "./components/IsThatTone.vue";
 import { ref, reactive } from "vue";
 import firebase from "firebase/app";
 import "firebase/auth";
