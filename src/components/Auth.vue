@@ -1,7 +1,7 @@
 <template>
   <h1>Welcome to is-that-tone-web</h1>
   <div id="firebaseui-auth-container"></div>
-  <div id="loader">Loading...</div>
+  <Loading id="loader" />
 </template>
 
 <script setup>
@@ -9,6 +9,7 @@ import firebase from "firebase/app";
 import "firebaseui";
 import "firebase/auth";
 import "firebaseui/dist/firebaseui.css";
+import Loading from "./Loading.vue";
 
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
 var uiConfig = {
