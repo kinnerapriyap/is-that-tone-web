@@ -1,5 +1,5 @@
 <template>
-  <img alt="Brainstorm" src="./assets/brainstorm.png" width="150" />
+  <img alt="Brainstorm" src="./assets/brainstorm.png" width="100" />
   <Loading v-if="!isSignedIn" />
   <IsThatTone v-else-if="isSignedIn" :userEmail="userEmail" />
   <Auth v-else />

@@ -1,5 +1,5 @@
 <template>
-  <h1>hi {{ userEmail }}</h1>
+  <h2>heylo {{ userEmail.split("@")[0] }}!</h2>
   <div class="column">
     <div class="row">
       Word:
