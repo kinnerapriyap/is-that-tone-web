@@ -9,6 +9,12 @@
       Options:
       <TagInput v-model="options" />
     </div>
+    <div class="row">
+      Language:
+      <select v-model="language" class="language-input">
+        <option v-for="l in languages" :key="l">{{ l }}</option>
+      </select>
+    </div>
     <button @click="submit">Submit</button>
   </div>
 </template>
@@ -21,6 +27,8 @@ import TagInput from "./TagInput.vue";
 
 const word = ref("");
 const options = ref([]);
+const language = ref("tel");
+const languages = ["eng", "hin", "jpn", "tel"];
 
 defineProps({
   userEmail: String,
@@ -32,7 +40,7 @@ const submit = () => {
     .add({
       word: word.value,
       answers: options.value,
-      language: "tl",
+      language: language.value,
     })
     .then((docRef) => {
       console.log("Added with id: ", docRef.id);
@@ -65,5 +73,9 @@ input {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.language-input {
+  margin: 5px;
+  padding: 5px;
 }
 </style>
