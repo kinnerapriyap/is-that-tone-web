@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import { reactive, ref } from "vue";
+import { ref } from "vue";
 import firebase from "firebase/app";
 import TagInput from "./TagInput.vue";
 
@@ -33,7 +33,10 @@ const submit = () => {
 </script>
 
 <style scoped>
-button,
+button {
+  margin: 20px;
+  height: 30px;
+}
 input {
   margin: 5px;
   padding: 0 10px;
