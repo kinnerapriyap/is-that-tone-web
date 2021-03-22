@@ -16,6 +16,7 @@
 <script setup>
 import { ref } from "vue";
 import firebase from "firebase/app";
+import "firebase/firestore";
 import TagInput from "./TagInput.vue";
 
 const word = ref("");
@@ -25,10 +26,20 @@ defineProps({
   userEmail: String,
 });
 
+var db = firebase.firestore();
 const submit = () => {
-  console.log("submitted");
-  console.log(word.value);
-  console.log(options.value);
+  db.collection("wordCards")
+    .add({
+      word: word.value,
+      answers: options.value,
+      language: "tl",
+    })
+    .then((docRef) => {
+      console.log("Added with id: ", docRef.id);
+    })
+    .catch((error) => {
+      console.error("Error: ", error);
+    });
 };
 </script>
 
