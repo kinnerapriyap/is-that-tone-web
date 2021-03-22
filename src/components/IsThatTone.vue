@@ -19,7 +19,7 @@ import firebase from "firebase/app";
 import TagInput from "./TagInput.vue";
 
 const word = ref("");
-const options = reactive({});
+const options = ref([]);
 
 defineProps({
   userEmail: String,
@@ -28,7 +28,7 @@ defineProps({
 const submit = () => {
   console.log("submitted");
   console.log(word.value);
-  console.log(options);
+  console.log(options.value);
 };
 </script>
 

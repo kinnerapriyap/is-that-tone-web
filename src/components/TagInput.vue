@@ -2,7 +2,7 @@
 
 <template>
   <div class="tag-input">
-    <div v-for="(tag, index) in tags" :key="tag" class="tag-input__tag">
+    <div v-for="(tag, index) in options" :key="tag" class="tag-input__tag">
       <span @click="removeTag(index)">x</span>
       {{ tag }}
     </div>
@@ -19,24 +19,32 @@
 <script setup>
 import { reactive } from "vue";
 
-const tags = reactive(["hello", "world"]);
+const options = reactive([]);
+
+defineProps({
+  modelValue: Array,
+});
+
+const emit = defineEmit(["update:modelValue"]);
 
 const addTag = (event) => {
   event.preventDefault();
   var val = event.target.value.trim();
   if (val.length > 0) {
-    tags.push(val);
+    options.push(val);
     event.target.value = "";
   }
+  emit("update:modelValue", options);
 };
 
 function removeTag(index) {
-  tags.splice(index, 1);
+  options.splice(index, 1);
+  emit("update:modelValue", options);
 }
 
 const removeLastTag = (event) => {
   if (event.target.value.length === 0) {
-    removeTag(tags.length - 1);
+    removeTag(options.length - 1);
   }
 };
 </script>
