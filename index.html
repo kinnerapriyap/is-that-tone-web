@@ -4,10 +4,150 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Is that Tone</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <style>
+      .text-sm{
+        font-size: 0.8em;
+      }
+    </style>
   </head>
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
+
+
+    <!-- template stuff-->
+    <section class="container pt-5">
+
+
+    <div class="row justify-content-center">
+      <div class="col-sm-10 col-lg-8">
+
+
+        <ul class="nav nav-tabs" id="langTab" >
+          <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="english-tab" data-toggle="tab" href="#english" >English</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="hindi-tab" data-toggle="tab" href="#hindi">Hindi</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="japanese-tab" data-toggle="tab" href="#japanese">Japanese</a>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="langTabContent">
+
+          <div class="tab-pane p-2 fade show active" id="english">
+            <table class="table">
+              <thead class="d-none">
+                <tr>
+                  <th scope="col">Word</th>
+                  <th scope="col">Answers</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="text-truncate">
+                    Ento
+                  </th>
+                  <td>
+                    <div class="text-muted text-sm py-1">Key: CEBINRuGgBWPVGtpWqp7</div>
+                    <div class="input-group input-group-sm mb-3">
+                      <div class="input-group-prepend"><span class="input-group-text">A:</span></div>
+                      <input type="text" class="form-control" value="happy">
+                    </div>
+                    <div class="input-group input-group-sm  mb-3">
+                      <div class="input-group-prepend"><span class="input-group-text">B:</span></div>
+                      <input type="text" class="form-control" value="sad" disabled>
+                    </div>
+                    <div class="input-group input-group-sm  mb-3">
+                      <div class="input-group-prepend"><span class="input-group-text">C:</span></div>
+                      <input type="text" class="form-control" value="angry" disabled>
+                    </div>
+                    <div class="input-group input-group-sm  mb-3">
+                      <div class="input-group-prepend"><span class="input-group-text">D:</span></div>
+                      <input type="text" class="form-control" value="what" disabled>
+                    </div>
+                    <a href="" class="btn btn-sm btn-default">+ add option</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-truncate">
+                    huh
+                  </th>
+                  <td>
+                    <div class="text-muted text-sm py-1">Key: CEBINRuGgBWPVGtpWqp7</div>
+                    <div class="input-group input-group-sm mb-3">
+                      <div class="input-group-prepend"><span class="input-group-text">A:</span></div>
+                      <input type="text" class="form-control" value="happy">
+                    </div>
+                    <div class="input-group input-group-sm  mb-3">
+                      <div class="input-group-prepend"><span class="input-group-text">B:</span></div>
+                      <input type="text" class="form-control" value="sad" disabled>
+                    </div>
+                    <div class="input-group input-group-sm  mb-3">
+                      <div class="input-group-prepend"><span class="input-group-text">C:</span></div>
+                      <input type="text" class="form-control" value="angry" disabled>
+                    </div>
+                    <div class="input-group input-group-sm  mb-3">
+                      <div class="input-group-prepend"><span class="input-group-text">D:</span></div>
+                      <input type="text" class="form-control" value="what" disabled>
+                    </div>
+                    <a href="" class="btn btn-sm btn-default">+ add option</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-truncate">
+                    wha
+                  </th>
+                  <td>
+                    <div class="text-muted text-sm py-1">Key: CEBINRuGgBWPVGtpWqp7</div>
+                    <div class="input-group input-group-sm mb-3">
+                      <div class="input-group-prepend"><span class="input-group-text">A:</span></div>
+                      <input type="text" class="form-control" value="happy">
+                    </div>
+                    <div class="input-group input-group-sm  mb-3">
+                      <div class="input-group-prepend"><span class="input-group-text">B:</span></div>
+                      <input type="text" class="form-control" value="sad" disabled>
+                    </div>
+                    <div class="input-group input-group-sm  mb-3">
+                      <div class="input-group-prepend"><span class="input-group-text">C:</span></div>
+                      <input type="text" class="form-control" value="angry" disabled>
+                    </div>
+                    <div class="input-group input-group-sm  mb-3">
+                      <div class="input-group-prepend"><span class="input-group-text">D:</span></div>
+                      <input type="text" class="form-control" value="what" disabled>
+                    </div>
+                    <a href="" class="btn btn-sm btn-default">+ add option</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div><!-- end english tab-->
+          <div class="tab-pane fade p-2" id="hindi">
+            Hindi Tab, duplicate EN Table here
+          </div><!-- end hindi tab-->
+          <div class="tab-pane fade p-2" id="japanese">
+            Japanese Tab, Duplicate EN Table here
+          </div><!-- end Japanese tab -->
+
+        </div><!-- end tab content-->
+
+      </div><!-- end col-->
+    </div><!-- end row -->
+
+    </section>
+
+
   </body>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </html>

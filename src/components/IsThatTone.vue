@@ -1,5 +1,25 @@
 <template>
   <h2>heylo {{ userEmail.split("@")[0] }}!</h2>
+
+<!-- single row add word, we can cut the option field and just add word here? -->
+  <section class="container">
+  <h3>Add new word card</h3>
+  <div class="row">
+    <div class="col-sm-3">
+    Language:
+      <select v-model="language" class="language-input">
+        <option v-for="l in languages" :key="l">{{ l }}</option>
+      </select>
+      </div>
+    <div class="col-sm-3">Word:
+      <input v-model.trim="word" placeholder="Enter word" /></div>
+    <div class="col-sm-3">
+      <button @click="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+  </section>
+
+
   <div class="column">
     <div class="row">
       Word:
